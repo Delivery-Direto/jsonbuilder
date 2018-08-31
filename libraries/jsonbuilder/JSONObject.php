@@ -76,10 +76,10 @@ class JSONObject {
 
 			$this->{$name} = array();
 			foreach ($collection as $data) {
-				$this->{$name}[] = new Object($data, $attributes);
+				$this->{$name}[] = new JSONObject($data, $attributes);
 			}
 		} else if (is_a($args[0], '\Closure')) {
-			$obj = new Object;
+			$obj = new JSONObject;
 			$args[0]->__invoke($obj);
 			$this->{$name} = $obj;
 		}
