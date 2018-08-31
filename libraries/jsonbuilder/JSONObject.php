@@ -13,7 +13,7 @@
 
 namespace jsonbuilder;
 
-class Object {
+class JSONObject {
 
 	public function __construct($data = null, $map = null) {
 		if ($data !== null) {

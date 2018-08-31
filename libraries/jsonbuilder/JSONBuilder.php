@@ -17,7 +17,7 @@ namespace jsonbuilder;
  * Utility class for generating JSON
  *
  * @package jsonbuilder
- */	
+ */
 class JSONBuilder {
 
 	/**
@@ -32,7 +32,7 @@ class JSONBuilder {
 	 * @return string
 	 */
 	public static function object(\Closure $callback) {
-		$obj = new Object;
+		$obj = new JSONObject;
 		$callback->__invoke($obj);
 		return json_encode($obj);
 	}
@@ -59,12 +59,12 @@ class JSONBuilder {
 	 *
 	 *      $json->author($user, array('id', 'profile_img', 'username'));
 	 *
-	 * @param array|\Traversable $items 
-	 * @param array|\Closure $map 
+	 * @param array|\Traversable $items
+	 * @param array|\Closure $map
 	 * @return string
 	 */
 	public static function arr($items, $map) {
-		$data = new Object;
+		$data = new JSONObject;
 		$data->items($items, $map);
 		return json_encode($data->items);
 	}
