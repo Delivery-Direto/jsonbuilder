@@ -1,6 +1,6 @@
 <?php
 
-use jsonbuilder\Object;
+use jsonbuilder\JSONObject;
 
 /**
  * Test case for \jsonbuilder\JSONBuilder
