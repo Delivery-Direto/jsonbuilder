@@ -13,6 +13,7 @@
 
 namespace jsonbuilder;
 
+#[\AllowDynamicProperties]
 class JSONObject {
 
 	public function __construct($data = null, $map = null) {
